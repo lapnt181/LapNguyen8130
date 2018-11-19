@@ -12,9 +12,29 @@ public class GeneralPage {
 	private final By lblWelcomeMessage=By.xpath("//div[@class='account']/strong");
 	
 //Elements
+	protected WebElement getTabLogin() {
+		return Constant.WEBDRIVER.findElement(tabLogin);
+	}
 	
+	protected WebElement getTabLogout() {
+		return Constant.WEBDRIVER.findElement(tabLogout);
+	}
 	
+	protected WebElement getLblWelcomeMessage() {
+		return Constant.WEBDRIVER.findElement(lblWelcomeMessage);
+	}
 	
+//Methods
 	
+	public String getWelcomeMessage()
+	{
+		return this.getLblWelcomeMessage().getText();
+	}
+	
+	public LoginPage gotoLoginPage()
+	{
+		this.getTabLogin().click();
+		return new LoginPage();
+	}
 	
 }
