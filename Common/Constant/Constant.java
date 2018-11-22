@@ -11,5 +11,6 @@ public class Constant {
 	public static final String EMPTY = "";
 	public static final String INVALID_USERNAME = "a@b.c";
 	public static final String INVALID_PASSWORD = "12345678";
-
+	public static final String PID = "12345678";
+	public static final String ALLOWEDCHARS = "abcdefghijklmnopqrstuvwxyz" + "1234567890";
 }
