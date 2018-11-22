@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\lap.nguyen\AppData\Local\Temp\testng-eclipse--1147187605\testng-customsuite.xml</span>
+                    <span>C:\Users\lap.nguyen\AppData\Local\Temp\testng-eclipse-1895122288\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -157,13 +157,14 @@
                   <a name="TC03">
                   </a> <!-- TC03 -->
                   <span class="method-name">TC03</span>
-                  <div class="stack-trace">java.lang.AssertionError: Error message is display as expected expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]
+                  <div class="stack-trace">java.lang.AssertionError: Error message is not display as expected.
+ expected [There was a problem with your login and/or errors exist in your form.] but found [Invalid username or password. Please try again.]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at Railway.LoginTest.TC03(LoginTest.java:67)
+	at Railway.LoginTest.TC03(LoginTest.java:63)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -191,6 +192,8 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 
 </div> <!-- stack-trace -->
+                  <em>
+(User cannot log into Railway with invalid password)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -198,13 +201,14 @@
                   <a name="TC05">
                   </a> <!-- TC05 -->
                   <span class="method-name">TC05</span>
-                  <div class="stack-trace">java.lang.AssertionError: Error message is display as expected expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
+                  <div class="stack-trace">java.lang.AssertionError: Error message is not display as expected.
+ expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at Railway.LoginTest.TC05(LoginTest.java:97)
+	at Railway.LoginTest.TC05(LoginTest.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -232,6 +236,8 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 
 </div> <!-- stack-trace -->
+                  <em>
+(System shows message when user enters wrong password several times)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -247,6 +253,8 @@
                   <a name="TC01">
                   </a> <!-- TC01 -->
                   <span class="method-name">TC01</span>
+                  <em>
+(TC01 - User can log into Railway with valid username and password)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -254,6 +262,8 @@
                   <a name="TC02">
                   </a> <!-- TC02 -->
                   <span class="method-name">TC02</span>
+                  <em>
+(TC02 - User can't login with blank Username textbox)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -261,6 +271,8 @@
                   <a name="TC04">
                   </a> <!-- TC04 -->
                   <span class="method-name">TC04</span>
+                  <em>
+(Login page displays when un-logged User clicks on Book ticket tab)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -268,7 +280,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\lap.nguyen\AppData\Local\Temp\testng-eclipse--1147187605\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\lap.nguyen\AppData\Local\Temp\testng-eclipse-1895122288\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -321,28 +333,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC05')
 data.setCell(0, 2, 'Railway.LoginTest')
-data.setCell(0, 3, 2422);
+data.setCell(0, 3, 3120);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'TC01')
 data.setCell(1, 2, 'Railway.LoginTest')
-data.setCell(1, 3, 1713);
+data.setCell(1, 3, 1129);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'TC03')
 data.setCell(2, 2, 'Railway.LoginTest')
-data.setCell(2, 3, 1480);
+data.setCell(2, 3, 1120);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'TC02')
 data.setCell(3, 2, 'Railway.LoginTest')
-data.setCell(3, 3, 1139);
+data.setCell(3, 3, 892);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'TC04')
 data.setCell(4, 2, 'Railway.LoginTest')
-data.setCell(4, 3, 919);
+data.setCell(4, 3, 681);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -375,63 +387,63 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC01</span>
-                <span class="method-start">6439 ms</span>
+                <span class="method-start">5572 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">8155 ms</span>
+                <span class="method-start">6704 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">8855 ms</span>
+                <span class="method-start">7378 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC02</span>
-                <span class="method-start">12357 ms</span>
+                <span class="method-start">11487 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">13497 ms</span>
+                <span class="method-start">12380 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">14172 ms</span>
+                <span class="method-start">13060 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC03</span>
-                <span class="method-start">17659 ms</span>
+                <span class="method-start">17098 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">19144 ms</span>
+                <span class="method-start">18222 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">19830 ms</span>
+                <span class="method-start">18924 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TC04</span>
-                <span class="method-start">23314 ms</span>
+                <span class="method-start">22985 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">24235 ms</span>
+                <span class="method-start">23668 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">24884 ms</span>
+                <span class="method-start">24339 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC05</span>
-                <span class="method-start">28488 ms</span>
+                <span class="method-start">28735 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">30913 ms</span>
+                <span class="method-start">31857 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
