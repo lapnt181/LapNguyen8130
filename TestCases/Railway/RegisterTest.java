@@ -13,6 +13,7 @@ import Constant.Messages;
 public class RegisterTest {
 	public HomePage homePage = new HomePage();
 	public RegisterPage registerPage = new RegisterPage();
+	public LoginPage loginPage = new LoginPage();
 
 	@BeforeMethod
 	public void beforeMethod() {
@@ -32,10 +33,20 @@ public class RegisterTest {
 	@Test(description = "TC07 - User can create new account")
 	public void TC07() {
 		homePage.gotoPage("Register");
-		registerPage.createAccount(Utilities.randomEmailGenerator(),Constant.PASSWORD,Constant.PASSWORD,Constant.PID);
-		String actualMsg= registerPage.GetPageLabel();
+		registerPage.createAccount(Utilities.randomEmailGenerator(), Constant.PASSWORD, Constant.PASSWORD,
+				Constant.PID);
+		String actualMsg = registerPage.GetPageLabel();
 		String expectedMsg = Messages.REGISTER_SUCCESS_MESSAGE;
-		Assert.assertEquals(actualMsg, expectedMsg, "Thank you message is display as expected.\n");
+		Assert.assertEquals(actualMsg, expectedMsg, "Thank you message doesn't display as expected.\n");
 	}
-
+	
+	@Test(description ="TC10 - User can't create account with \"Confirm password\" is not the same with \"Password\"")
+	public void TC10() {
+		homePage.gotoPage("Register");
+		registerPage.createAccount(Utilities.randomEmailGenerator(), Constant.PASSWORD, Constant.INVALID_PASSWORD,
+				Constant.PID);
+		String actualMsg = registerPage.getErrorMessage();
+		String expectedMsg = Messages.INVALID_REGISTER_MESSAGE;
+		Assert.assertEquals(actualMsg, expectedMsg, "Error message doesn't display as expected.\n");
+	}
 }

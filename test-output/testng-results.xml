@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9635" started-at="2018-11-22T10:45:31Z" finished-at="2018-11-22T10:45:41Z">
+  <suite name="Default suite" duration-ms="18922" started-at="2018-11-26T10:22:28Z" finished-at="2018-11-26T10:22:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9635" started-at="2018-11-22T10:45:31Z" finished-at="2018-11-22T10:45:41Z">
-      <class name="Railway.LoginTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.LoginTest@5e671e20]" name="beforeMethod" is-config="true" duration-ms="6851" started-at="2018-11-22T10:45:32Z" finished-at="2018-11-22T10:45:38Z">
+    <test name="Default test" duration-ms="18922" started-at="2018-11-26T10:22:28Z" finished-at="2018-11-26T10:22:47Z">
+      <class name="Railway.RegisterTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.RegisterTest@54f4a7f0]" name="beforeMethod" is-config="true" duration-ms="7102" started-at="2018-11-26T10:22:28Z" finished-at="2018-11-26T10:22:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC06()[pri:0, instance:Railway.LoginTest@5e671e20]" name="TC06" duration-ms="1984" started-at="2018-11-22T10:45:38Z" description="Additional pages display once user logged in" finished-at="2018-11-22T10:45:40Z">
+        <test-method status="PASS" signature="TC07()[pri:0, instance:Railway.RegisterTest@54f4a7f0]" name="TC07" duration-ms="4719" started-at="2018-11-26T10:22:35Z" description="TC07 - User can create new account" finished-at="2018-11-26T10:22:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.LoginTest@5e671e20]" name="afterMethod" is-config="true" duration-ms="688" started-at="2018-11-22T10:45:40Z" finished-at="2018-11-22T10:45:41Z">
+        </test-method> <!-- TC07 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.RegisterTest@54f4a7f0]" name="afterMethod" is-config="true" duration-ms="784" started-at="2018-11-26T10:22:40Z" finished-at="2018-11-26T10:22:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Railway.LoginTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Railway.RegisterTest@54f4a7f0]" name="beforeMethod" is-config="true" duration-ms="3959" started-at="2018-11-26T10:22:41Z" finished-at="2018-11-26T10:22:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC10()[pri:0, instance:Railway.RegisterTest@54f4a7f0]" name="TC10" duration-ms="1549" started-at="2018-11-26T10:22:45Z" description="TC10 - User can&#039;t create account with &quot;Confirm password&quot; is not the same with &quot;Password&quot;" finished-at="2018-11-26T10:22:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Railway.RegisterTest@54f4a7f0]" name="afterMethod" is-config="true" duration-ms="707" started-at="2018-11-26T10:22:46Z" finished-at="2018-11-26T10:22:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Railway.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

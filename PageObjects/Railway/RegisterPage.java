@@ -18,12 +18,15 @@ public class RegisterPage extends GeneralPage {
 	// Element
 	// Methods
 		
-		public void createAccount(String email, String password, String confirmPassword, String pid) {
+		public String createAccount(String email, String password, String confirmPassword, String pid) {
 			
 			ElementHelper.enter(Utilities.getElement(txtEmail),email);
 			ElementHelper.enter(Utilities.getElement(txtPassword),password);
 			ElementHelper.enter(Utilities.getElement(txtConfirmPassword),confirmPassword);
 			ElementHelper.enter(Utilities.getElement(txtPid),pid);
 			Utilities.getElement(btnRegister).click();
+			
+			return email;
 		}
 }
+	

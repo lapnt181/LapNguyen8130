@@ -1,6 +1,7 @@
 package Railway;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import Common.Utilities;
@@ -39,7 +40,10 @@ public class GeneralPage {
 
 	private final By lblPage = By.xpath("//h1[normalize-space()]");
 	private final By lblWelcomeMessage = By.xpath("//div[@class='account']");
-	private final By lblErrorMessage = By.xpath("//p[@class='message error LoginForm']");
+	private final By lblLoginErrorMessage = By.xpath("//p[@class='message error LoginForm']");
+	private final By lblErrorMessage = By.xpath("//p[@class='message error']");
+	private final By lblSuccessMessage = By.xpath("//p[@class='message success']");
+	
 
 	// Elements
 
@@ -49,99 +53,42 @@ public class GeneralPage {
 		return Utilities.getElementText(lblWelcomeMessage);
 	}
 
+	public String getLoginErrorMessage() {
+		return Utilities.getElementText(lblLoginErrorMessage);
+	}
+	
 	public String getErrorMessage() {
 		return Utilities.getElementText(lblErrorMessage);
 	}
+	
+	public String getSuccessMessage() {
+		return Utilities.getElementText(lblSuccessMessage);
+	}
 
 	public String getTabLabel(String tab) {
-		String tabName = "";
-		switch (tab) {
-		case "Login":
-			tabName = Utilities.getElementText(tabLogin);
-			break;
-		case "Logout":
-			tabName = Utilities.getElementText(tabLogout);
-			break;
-		case "Home":
-			tabName = Utilities.getElementText(tabHome);
-			break;
-		case "FAQ":
-			tabName = Utilities.getElementText(tabFAQ);
-			break;
-		case "Contact":
-			tabName = Utilities.getElementText(tabContact);
-			break;
-		case "Timetable":
-			tabName = Utilities.getElementText(tabTimetable);
-			break;
-		case "TicketPrice":
-			tabName = Utilities.getElementText(tabTicketPrice);
-			break;
-		case "BookTicket":
-			tabName = Utilities.getElementText(tabBookTicket);
-			break;
-		case "MyTicket":
-			tabName = Utilities.getElementText(tabMyTicket);
-			break;
-		case "ChangePassword":
-			tabName = Utilities.getElementText(tabChangePassword);
-		case "Register":
-			tabName = Utilities.getElementText(tabRegister);
-			break;
-		}
+		String str = String.format("//span[text()='%s']", tab);
+		WebElement element = Constant.WEBDRIVER.findElement(By.xpath(str));
+		String tabName = Utilities.getElementText((By) element);
 		return tabName;
 	}
 
-	public void gotoPage(String pageName) {
-
-		switch (pageName) {
-		case "Login":
-			Constant.WEBDRIVER.findElement(tabLogin).click();
-			break;
-		case "Home":
-			Constant.WEBDRIVER.findElement(tabHome).click();
-			break;
-		case "FAQ":
-			Constant.WEBDRIVER.findElement(tabFAQ).click();
-			break;
-		case "Contact":
-			Constant.WEBDRIVER.findElement(tabContact).click();
-			break;
-		case "Timetable":
-			Constant.WEBDRIVER.findElement(tabTimetable).click();
-			break;
-		case "TicketPrice":
-			Constant.WEBDRIVER.findElement(tabTicketPrice).click();
-			break;
-		case "BookTicket":
-			Constant.WEBDRIVER.findElement(tabBookTicket).click();
-			break;
-		case "MyTicket":
-			Constant.WEBDRIVER.findElement(tabMyTicket).click();
-			break;
-		case "ChangePassword":
-			Constant.WEBDRIVER.findElement(tabChangePassword).click();
-			break;
-		case "Register":
-			Constant.WEBDRIVER.findElement(tabRegister).click();
-			break;
-		}
+	public void gotoPage(String tabName) {
+		String str = String.format("//span[text()='%s']", tabName);
+		WebElement element = Constant.WEBDRIVER.findElement(By.xpath(str));
+		element.click();
 	}
 
 	public Boolean isTabDisplayed(String tab) {
 		Boolean isTabdisplayed = true;
-		switch (tab) {
-		case "Logout":
-			isTabdisplayed = isElementDisplayed(Utilities.getElement(tabLogout));
-			break;
-		case "ChangePassword":
-			isTabdisplayed = isElementDisplayed(Utilities.getElement(tabChangePassword));
-			break;
-		case "MyTicket":
-			isTabdisplayed = isElementDisplayed(Utilities.getElement(tabMyTicket));
-			break;
+
+		String str = String.format("//span[text()='%s']", tab);
+		try {
+			WebElement element = Constant.WEBDRIVER.findElement(By.xpath(str));
+			isTabdisplayed = element.isDisplayed();
+			return isTabdisplayed;
+		} catch (NoSuchElementException e) {
+			return false;
 		}
-		return isTabdisplayed;
 	}
 
 	public WebElement getLblPage() {

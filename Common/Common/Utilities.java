@@ -3,6 +3,7 @@ package Common;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.time.Instant;
 
 import Constant.Constant;
 import Railway.*;
@@ -28,22 +29,15 @@ public class Utilities {
 		return getElement(element).getText();
 	}
 	
-	public static String getRandomString() {
-        StringBuilder str = new StringBuilder();
-        Random rnd = new Random();
-        while (str.length() < 10) 
-        { 
-            int index = (int) (rnd.nextFloat() * Constant.ALLOWEDCHARS.length());
-            str.append(Constant.ALLOWEDCHARS.charAt(index));
-        }
-        String randomString = str.toString();
-        return randomString;
-    }
-	
+		
 	public static String randomEmailGenerator() {
 	
 		String randomEmail="";
-		return randomEmail=getRandomString()+"@mailinator.com";
+		return randomEmail="test"+Instant.now().getEpochSecond()+"@mailinator.com";
+	}
+	
+	public static void openPage() {
+		
 	}
 
 }
