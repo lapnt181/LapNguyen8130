@@ -6,25 +6,10 @@ import org.openqa.selenium.WebElement;
 
 import Common.Utilities;
 import Constant.Constant;
+import Mailinator.InboxPage;
 
 public class GeneralPage {
 	// Locators
-
-	// private final By tabHome = By.xpath("//a[@href='/Page/HomePage.cshtml']");
-	// private final By tabFAQ = By.xpath("//a[@href='/Page/FAQ.cshtml']");
-	// private final By tabContact = By.xpath("//a[@href='/Page/Contact.cshtml']");
-	// private final By tabTimetable =
-	// By.xpath("//a[@href='/Page/TrainTimeListPage.cshtml']");
-	// private final By tabTicketPrice =
-	// By.xpath("//a[@href='/Page/TrainPriceListPage.cshtml']");
-	// private final By tabBookTicket =
-	// By.xpath("//a[@href='/Page/BookTicketPage.cshtml']");
-	// private final By tabMyTicket =
-	// By.xpath("//a[@href='/Page/ManageTicket.cshtml']");
-	// private final By tabChangePassword =
-	// By.xpath("//a[@href='/Account/ChangePassword.cshtml']");
-	// private final By tabLogin = By.xpath("//a[@href='/Account/Login.cshtml']");
-	// private final By tabLogout = By.xpath("//a[@href='/Account/Logout']");
 
 	private final By tabHome = By.xpath("//span[text()='Home']");
 	private final By tabFAQ = By.xpath("//span[text()='FAQ']");
@@ -43,7 +28,6 @@ public class GeneralPage {
 	private final By lblLoginErrorMessage = By.xpath("//p[@class='message error LoginForm']");
 	private final By lblErrorMessage = By.xpath("//p[@class='message error']");
 	private final By lblSuccessMessage = By.xpath("//p[@class='message success']");
-	
 
 	// Elements
 
@@ -56,11 +40,11 @@ public class GeneralPage {
 	public String getLoginErrorMessage() {
 		return Utilities.getElementText(lblLoginErrorMessage);
 	}
-	
+
 	public String getErrorMessage() {
 		return Utilities.getElementText(lblErrorMessage);
 	}
-	
+
 	public String getSuccessMessage() {
 		return Utilities.getElementText(lblSuccessMessage);
 	}

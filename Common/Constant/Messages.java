@@ -10,6 +10,12 @@ public class Messages {
 	public static final String REGISTER_SUCCESS_MESSAGE = "Thank you for registering your account";
 	public static final String CHANGE_PASSWORD_SUCCESS_MESSAGE = "Your password has been updated";
 	public static final String INVALID_REGISTER_MESSAGE = "There're errors in the form. Please correct the errors and try again.";
+	public static final String INVALID_PASSWORD_LENGTH_MESSAGE = "Invalid password length";
+	public static final String INVALID_PID_LENGTH_MESSAGE = "Invalid ID length";
+	public static final String EXPIRED_RESET_TOKEN_MESSAGE = "The password reset token is incorrect or may be expired. Visit the forgot password page to generate a new one.";
+	public static final String INVALID_RESET_TOKEN_MESSAGE = "The password reset token is invalid.";
+	public static final String CANNOT_RESET_PASSWORD_MESSAGE = "Could not reset password. Please correct the errors and try again.";
+	public static final String MISMATCH_PASSWORD_MESSAGE = "The password confirmation did not match the new password.";
+	public static final String BOOK_TICKET_SUCCESS_MESSAGE = "Ticket booked successfully!";
+
 }
-
-

@@ -1,22 +1,22 @@
 package Railway;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import Common.Utilities;
 import Constant.Constant;
 import Constant.Messages;
+import Mailinator.InboxPage;
 
 public class LoginTest {
 	public HomePage homePage = new HomePage();
 	public LoginPage loginPage = new LoginPage();
 	public RegisterPage registerPage = new RegisterPage();
 	public ChangePasswordPage changePassword = new ChangePasswordPage();
-
-	public String randomEmail = Utilities.randomEmailGenerator();
+	public String randomString = Utilities.randomStringGenerator();
+	public String randomEmail = Utilities.mailinatorEmailGenerator(randomString);
 
 	@BeforeMethod
 	public void beforeMethod() {
@@ -79,9 +79,9 @@ public class LoginTest {
 		loginPage.gotoPage("Login");
 		loginPage.login(Constant.USERNAME, Constant.PASSWORD, 1);
 
-		Assert.assertEquals((boolean) loginPage.isTabDisplayed("My ticket"), true);
-		Assert.assertEquals((boolean) loginPage.isTabDisplayed("Logout"), true);
-		Assert.assertEquals((boolean) loginPage.isTabDisplayed("Change Password"), true);
+		Assert.assertEquals((boolean) loginPage.isTabDisplayed(Constant.TabName.MYTICKET.getValue()), true);
+		Assert.assertEquals((boolean) loginPage.isTabDisplayed(Constant.TabName.LOGOUT.getValue()), true);
+		Assert.assertEquals((boolean) loginPage.isTabDisplayed(Constant.TabName.CHANGEPASSWORD.getValue()), true);
 
 		// Verify My ticket page is open
 		loginPage.gotoPage("My ticket");
@@ -110,8 +110,9 @@ public class LoginTest {
 		homePage.gotoPage("Login");
 		loginPage.login(Constant.USERNAME, Constant.PASSWORD, 1);
 		loginPage.gotoPage("Change password");
-		String actual = changePassword.changePassword(Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD).getSuccessMessage();
-		String expected = Messages.CHANGE_PASSWORD_SUCCESS_MESSAGE; 
+		String actual = changePassword.changePassword(Constant.PASSWORD, Constant.PASSWORD, Constant.PASSWORD)
+				.getSuccessMessage();
+		String expected = Messages.CHANGE_PASSWORD_SUCCESS_MESSAGE;
 		Assert.assertEquals(actual, expected, "Successful message is not display as expected.\n");
 	}
 
